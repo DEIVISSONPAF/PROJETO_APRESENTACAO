@@ -15,10 +15,3 @@ let pedidos = [];
             alert('Pedido registrado com sucesso!');
             document.getElementById('pedidoForm').reset();
         }
-
-        function exportarExcel() {
-            let ws = XLSX.utils.json_to_sheet(pedidos);
-            let wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, "Pedidos");
-            XLSX.writeFile(wb, "pedidos.xlsx");
-        }
