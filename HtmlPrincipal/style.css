@@ -71,6 +71,7 @@ button{
     width: 35%;
     margin: 0 auto;
     margin-top: 1.5rem;
+    transition: transform 0.2s ease-in-out;
     text-shadow:
     -1px -1px 0 black,  
      1px -1px 0 black,
@@ -80,11 +81,12 @@ button{
 }
 
 button:hover{
-    transform: translateY(-7px);
+    transform: translateY(-7px) scale(1.1);
     transition: 0.5s;
     color: rgb(255, 255, 255);
     box-shadow: 0px 15px 20px rgba(26, 93, 114, 0.781);
     background-color:  #379adb;
+    
     text-shadow:
     -1px -1px 0 rgb(70, 70, 70),  
      1px -1px 0 rgb(70, 70, 70),
