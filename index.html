@@ -13,20 +13,20 @@
     <!--PEDIDOS-->
         <div class="container">
             <h2 id="title">Registro de Pedidos</h2>
-            <form id="pedidoForm">
+            <form  method="post" id="pedidoForm">
                 <label>Nome:</label>
-                <input type="text" id="Nome" required>
+                <input type="text"  id="Nome" required>
                 
                 <label>Codigo da Peça:</label>
-                <input type="text" id="Codigo" required>
+                <input type="text"  id="Codigo" required>
 
                 <label> Quantidade:</label>
-                <input type="number" id="Quantidade" required>
+                <input type="number"  id="Quantidade" required>
 
                 
-                <button type="button" onclick="registrarPedido()">Registrar Pedido</button>
-                <input type="hidden" name="horario" value="x-sheetmonkey-current-date-time" />
-                <button type="button" >Lista de Pedidos</button>
+                <button  type="submit" >Registrar Pedido</button>
+                <input type="hidden" name="Status" value="x-sheetmonkey-current-date-time" />
+                <button >Lista de Pedidos</button>
             </form>
                 
         </div>
