@@ -3,7 +3,7 @@ html{
     height: 100%;
     box-sizing: border-box;
     font-size: 16px;
-    padding: 16rem 7rem;
+    padding: 10rem 3rem;
     background: linear-gradient(250deg, #ffffff, #add8f5);
     font-family: "Inter", sans-serif;
 }
@@ -93,6 +93,42 @@ button:hover{
      1px  1px 0 rgb(70, 70, 70);
 }
 
+/* Media Queries para responsividade */
+@media only screen and (max-width: 1023px) {
+    html {
+        padding: 5rem 3rem;
+    }
 
+    .container {
+        width: 90%;
+    }
+
+    button {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        padding: 3rem .2rem ;
+        
+    }
+
+    .container {
+        width: 84%;
+    }
+
+    #title {
+        font-size: 2rem;
+    }
+
+    label, input, button {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 70%;
+    }
+}
 
 
