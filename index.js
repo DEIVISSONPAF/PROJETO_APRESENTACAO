@@ -1,4 +1,4 @@
-function abrirNovaAba() {
+function abrirNovaAba() { 
     window.open('https://docs.google.com/spreadsheets/d/1jbI9wN9ny8HCJPOX66i69zdCSp6eoHNK9V5IhJ5ftMk/edit?gid=0#gid=0', '_blank');
 }
 
@@ -8,22 +8,30 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); 
 
-       
         const nome = document.getElementById("Nome").value;
         const peca = document.getElementById("Codigo").value;
 
-       
+        // Verifica se os valores estão corretos antes do envio
+        console.log("Nome Capturado:", nome);
+        console.log("Peça Capturada:", peca);
+
+        if (!nome || !peca) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
         const dados = {
             Nome: nome,   
-            Peça: peca,     
+            Peca: peca,  // Alterado para evitar problemas de acento
             Data: new Date().toLocaleDateString('pt-BR')  
         };
 
-       
+        console.log("Dados enviados:", JSON.stringify(dados)); // Debug
+
         fetch("https://sheetdb.io/api/v1/qsdseylkcni5a", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ data: dados }) 
+            body: JSON.stringify(dados)  // Removido `{ data: dados }`
         })
         .then(response => {
             if (!response.ok) {
