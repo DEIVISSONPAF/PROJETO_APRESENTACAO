@@ -1,132 +1,56 @@
-html{
-    width: 100%;
-    height: 100%;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
-    padding: 10rem 3rem;
-    background: linear-gradient(250deg, #ffffff, #add8f5);
-    font-family: "Inter", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body { 
-    font-family: Arial, sans-serif; 
-    align-items: center;
+/* Corpo da página */
+body {
+    display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-#title{
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a2c2e1, #4e54c8); /* Gradiente azul claro e escuro */
+    color: #fff;
     text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    
 }
 
-.container{
-    background-color: rgb(245, 245, 245);
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.466);
-    width: 75%;
-    margin: 0 auto;
+/* Container principal */
+.container {
+    background: rgba(0, 0, 0, 0.3);  /* Fundo escuro translúcido */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
 }
 
-.container > form{
-    display: flex; 
-    flex-direction: column; 
-    
-}
-
-
-
-label{
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-
-input{
-    padding: .5rem;
-    margin-bottom: 1rem;
-    border-radius: .5rem;
-    border: .12rem solid #000;
-    font-size: 1.5rem;
-}
-
-button{
-    padding: .5rem;
-    border-radius: 1rem;
-    border: 0;
-    font-size: 1.5rem;
-    background-color:  #2490d8;
-    color: rgb(245, 245, 245);
+/* Botão estilizado */
+button {
+    background: linear-gradient(135deg, #a2c2e1, #4e54c8); /* Gradiente azul claro e escuro */
+    color: #fff;
+    border: 2px solid #a2c2e1;  /* Bordas em azul claro */
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    width: 35%;
-    margin: 0 auto;
-    margin-top: 1.5rem;
-    transition: transform 0.2s ease-in-out;
-    text-shadow:
-    -1px -1px 0 black,  
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-    
+    transition: 0.3s;
 }
 
-button:hover{
-    transform: translateY(-7px) scale(1.1);
-    transition: 0.5s;
-    color: rgb(255, 255, 255);
-    box-shadow: 0px 15px 20px rgba(26, 93, 114, 0.781);
-    background-color:  #379adb;
-    text-shadow:
-    -1px -1px 0 rgb(70, 70, 70),  
-     1px -1px 0 rgb(70, 70, 70),
-    -1px  1px 0 rgb(70, 70, 70),
-     1px  1px 0 rgb(70, 70, 70);
+button:hover {
+    background: linear-gradient(135deg, #8f94fb, #4e54c8);  /* Muda o gradiente no hover */
+    border-color: #8f94fb;  /* Altera a cor da borda no hover */
 }
 
-
-@media only screen and (max-width: 1023px) {
-    html {
-        padding: 5rem 3rem;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    button {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    html {
-        padding: 3rem .2rem ;
-        
-    }
-
-    .container {
-        width: 84%;
-    }
-
-    #title {
-        font-size: 2rem;
-    }
-
-    label, input, button {
-        font-size: 1.2rem;
-    }
-
-    button {
-        width: 70%;
-    }
+/* Estilizando os registros de data/hora */
+.registro {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;  /* Texto em branco */
 }
