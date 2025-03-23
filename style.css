@@ -26,16 +26,17 @@ body {
     width: 350px;
 }
 
-/* Botão estilizado */
+
 button {
     background: linear-gradient(135deg, #a2c2e1, #4e54c8); /* Gradiente azul claro e escuro */
-    color: #fff;
-    border: 2px solid #a2c2e1;  /* Bordas em azul claro */
+    color: #fff; 
+    border: 2px solid #a2c2e1; 
     padding: 12px;
     width: 100%;
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;  /* Remove sublinhado */
     transition: 0.3s;
 }
 
