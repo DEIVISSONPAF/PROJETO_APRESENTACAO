@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>REGISTRADOR</title>
     <style>
-        /* Definindo a imagem de fundo para ocupar todo o fundo da página */
+        /* Definindo a imagem de fundo para ocupar toda a tela */
         body {
             background-image: url('https://www.logweb.com.br/wp-content/uploads/2020/11/pub-fabrica-hyndai.jpg');
             background-size: cover; /* A imagem ocupa toda a tela */
@@ -31,6 +31,7 @@
             background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com baixa transparência */
             padding-top: 40px;
             z-index: 1;
+            box-sizing: border-box; /* Garantir que o padding não sobreponha o tamanho do container */
         }
 
         /* Estilo para a imagem dentro do container */
@@ -41,7 +42,7 @@
             width: 50px;
             height: 50px;
             object-fit: cover;
-            opacity: 0.9; /* Menos transparente */
+            opacity: 0.8; /* Menos transparente */
         }
 
         /* Estilo para o título */
