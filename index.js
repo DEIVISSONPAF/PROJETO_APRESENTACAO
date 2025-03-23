@@ -1,4 +1,4 @@
 
 function abrirNovaAba() {
-    window.open('https://1drv.ms/x/c/8388a7abc69fb78d/EYfxqPuCRNZHuKOBRpey1QkB6kUsbxY12qHA2fvsjmYotA?e=QZa8xd', '_blank');
+    window.open('https://docs.google.com/spreadsheets/d/1zsDxXtcW2sfLOYU2cHdV9FAlOn2NV1hh0DOlUR5lvPw/edit?usp=sharing', '_blank');
 }
