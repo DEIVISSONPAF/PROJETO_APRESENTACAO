@@ -4,11 +4,6 @@ function abrirNovaAba() {
 }
 
 
-function VoltarNoSite() {
-    window.open('https://projetoapresentaca.netlify.app/', '_blank');
-}
-
-
 const dados = {
     Nome: "Usuario123",   
     Peça: "COD1234",     
@@ -25,3 +20,36 @@ fetch("https://sheetdb.io/api/v1/qsdseylkcni5a", {
     console.log("Resposta da API:", data);
 })
 .catch(error => console.error("Erro ao enviar:", error));
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("pedidoForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao registrar o pedido.");
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert("Pedido registrado com sucesso!");
+            form.reset(); 
+            setTimeout(() => {
+                location.reload(); 
+            }, 500);
+        })
+        .catch(error => {
+            alert("Erro ao registrar pedido. Tente novamente.");
+            console.error("Erro:", error);
+        });
+    });
+});

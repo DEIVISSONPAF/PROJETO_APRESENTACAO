@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
 
 * {
     margin: 0;
@@ -8,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
 
 body {
     background: linear-gradient(135deg, #004aad, #49b8f0);
@@ -18,7 +15,6 @@ body {
     align-items: center;
     padding: 20px;
 }
-
 
 .container {
     background: white;
@@ -31,14 +27,12 @@ body {
 }
 
 .container img {
-    width: 80px; 
-    height: auto; 
+    width: 85px;
+    height: auto;
     display: block;
-    margin: 0 auto 10px; 
-    max-width: 100%; 
+    margin: 0 auto 10px;
+    max-width: 100%;
 }
-
-
 
 h2#title {
     font-size: 24px;
@@ -46,7 +40,6 @@ h2#title {
     color: #333;
     margin-bottom: 20px;
 }
-
 
 input {
     width: 100%;
@@ -63,9 +56,14 @@ input:focus {
     border-color: #007BFF;
 }
 
-/* Botões */
-button {
+/* Alinhamento dos botões */
+.button-group {
+    display: block; /* Garante que os botões fiquem empilhados */
     width: 100%;
+}
+
+button {
+    width: 100%; /* Garante que os botões ocupem toda a largura do formulário */
     padding: 12px;
     font-size: 16px;
     font-weight: 600;
@@ -73,8 +71,8 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 10px; /* Espaço entre os botões */
 }
-
 
 button[type="submit"] {
     background: linear-gradient(135deg, #007BFF, #0056b3);
@@ -85,18 +83,16 @@ button[type="submit"]:hover {
     background: linear-gradient(135deg, #0056b3, #004aad);
 }
 
-
 button[type="button"] {
     background-color: #f0f0f0;
     color: #333;
-    margin-top: 10px;
 }
 
 button[type="button"]:hover {
     background-color: #d6d6d6;
 }
 
-
+/* Responsividade */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
@@ -117,9 +113,8 @@ button[type="button"]:hover {
         padding: 10px;
     }
 
-    
     .container img {
-        width: 70px; 
-        height: 70px; 
+        width: 70px;
+        height: 70px;
     }
 }
