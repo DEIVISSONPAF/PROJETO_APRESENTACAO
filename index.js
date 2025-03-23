@@ -1,26 +1,6 @@
-
 function abrirNovaAba() {
     window.open('https://docs.google.com/spreadsheets/d/1jbI9wN9ny8HCJPOX66i69zdCSp6eoHNK9V5IhJ5ftMk/edit?gid=0#gid=0', '_blank');
 }
-
-
-const dados = {
-    Nome: "Usuario123",   
-    Peça: "COD1234",     
-    Data: new Date().toLocaleDateString('pt-BR')  
-};
-
-fetch("https://sheetdb.io/api/v1/qsdseylkcni5a", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(dados)
-})
-.then(response => response.json())
-.then(data => {
-    console.log("Resposta da API:", data);
-})
-.catch(error => console.error("Erro ao enviar:", error));
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("pedidoForm");
@@ -28,11 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); 
 
-        const formData = new FormData(form);
+       
+        const nome = document.getElementById("Nome").value;
+        const peca = document.getElementById("Codigo").value;
 
-        fetch(form.action, {
+       
+        const dados = {
+            Nome: nome,   
+            Peça: peca,     
+            Data: new Date().toLocaleDateString('pt-BR')  
+        };
+
+       
+        fetch("https://sheetdb.io/api/v1/qsdseylkcni5a", {
             method: "POST",
-            body: formData
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ data: dados }) 
         })
         .then(response => {
             if (!response.ok) {
