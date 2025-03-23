@@ -12,14 +12,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #65d100, #00bfff);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); 
     color: #fff;
     text-align: center;
 }
 
 
 .container {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);  
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -28,8 +28,8 @@ body {
 
 
 button {
-    background: #ffcc00;
-    color: #333;
+    background: #4e54c8;  
+    color: #fff;
     border: none;
     padding: 12px;
     width: 100%;
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-    background: #ff9900;
+    background: #8f94fb;
 }
 
 
@@ -51,4 +51,5 @@ button:hover {
     border-radius: 8px;
     font-size: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;  /* Texto em branco */
 }
