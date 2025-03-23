@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="style.css">
     <title>REGISTRADOR</title>
     <style>
-        /* Definindo a imagem de fundo com pouca transparência */
+        /* Definindo a imagem de fundo para ocupar todo o fundo da página */
         body {
             background-image: url('https://www.logweb.com.br/wp-content/uploads/2020/11/pub-fabrica-hyndai.jpg');
-            background-size: cover;
+            background-size: cover; /* A imagem ocupa toda a tela */
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            opacity: 0.7; /* Opacidade para tornar a imagem mais suave */
+            margin: 0; /* Remove margens padrão */
+            height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
         }
 
         /* Estilo para o container */
@@ -27,8 +28,9 @@
             margin: 0 auto;
             border: 1px solid #ccc;
             border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com baixa transparência */
             padding-top: 40px;
+            z-index: 1;
         }
 
         /* Estilo para a imagem dentro do container */
@@ -39,18 +41,19 @@
             width: 50px;
             height: 50px;
             object-fit: cover;
+            opacity: 0.9; /* Menos transparente */
         }
 
         /* Estilo para o título */
         h2#title {
-            font-size: 32px; /* Aumentando o tamanho do título */
+            font-size: 36px; /* Aumentando o tamanho do título */
             font-weight: bold;
             color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Estilos para o botão */
+        /* Estilos para os botões */
         button {
             background-color: #a4ddfb;
             border: none;
