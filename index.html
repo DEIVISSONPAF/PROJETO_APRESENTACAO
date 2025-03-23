@@ -14,12 +14,13 @@
         <div class="container">
 
               <h2 id="title">Registro de Pedidos</h2>
-               <form  method="post" id="pedidoForm">
+               <form action="https://1drv.ms/x/c/8388a7abc69fb78d/EYfxqPuCRNZHuKOBRpey1QkB6kUsbxY12qHA2fvsjmYotA?e=QZa8xd" method="post" id="pedidoForm">
                 <label>Usuário:</label>
-                <input type="text"  id="Nome" required>
+                <input type="text" name="Nome" id="Nome" required>
             
                 <label>Codigo da Peça:</label>
-                <input type="text"  id="Codigo" required>
+                <input type="text" name="Id_peça" id="Codigo" required>
+
                 <button  type="submit" >Registrar Pedido</button>
                 <input type="hidden" name="Status" value="x-sheetmonkey-current-date-time" />
                 <button onclick="abrirNovaAba()">Lista de Pedidos</button>
