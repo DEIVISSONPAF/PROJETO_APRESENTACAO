@@ -3,6 +3,12 @@ function abrirNovaAba() {
     window.open('https://docs.google.com/spreadsheets/d/1jbI9wN9ny8HCJPOX66i69zdCSp6eoHNK9V5IhJ5ftMk/edit?gid=0#gid=0', '_blank');
 }
 
+
+function VoltarNoSite() {
+    window.open('https://projetoapresentaca.netlify.app/', '_blank');
+}
+
+
 const dados = {
     Nome: "Usuario123",   
     Peça: "COD1234",     
