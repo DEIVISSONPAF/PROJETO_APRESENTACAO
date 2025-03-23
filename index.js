@@ -5,7 +5,7 @@ function abrirNovaAba() {
 
 const dados = {
     Nome: "Usuario123",   
-    Peças: "COD1234",     
+    Peça: "COD1234",     
     Data: new Date().toLocaleDateString('pt-BR')  
 };
 
