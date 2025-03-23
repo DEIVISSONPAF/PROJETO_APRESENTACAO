@@ -1,104 +1,34 @@
-‎HtmlPrincipal/index.html
-+17
--20
-Original file line number	Diff line number	Diff line change
-@@ -3,37 +3,34 @@
-<head>
-    <meta charset="pt-br">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>APRESENTAÇÃO</title>
-    <title>REGISTRADOR</title>
-</head>
-<body>
-    <section>
-        <div>
-            <h2>Registro de Pedidos</h2>
-    <!--PEDIDOS-->
-        <div class="container">
-            <h2 id="title">Registro de Pedidos</h2>
-            <form id="pedidoForm">
-                <label>Nome:</label>
-                <input type="text" id="nome" required>
-                <input type="text" id="Nome" required>
-
-                <label>Sobrenome:</label>
-                <input type="text" id="sobrenome" required>
-                
-                <label>Turno:</label>
-                <select id="turno">
-                    <option value="1º">1º Turno</option>
-                    <option value="2º">2º Turno</option>
-                    <option value="3º">3º Turno</option>
-                </select>
-                
-                <label>Pedido:</label>
-                <textarea id="pedido" required></textarea>
-                <label>Codigo da Peça:</label>
-                <input type="text" id="Codigo" required>
-                <label> Quantidade:</label>
-                <input type="number" id="Quantidade" required>
-
-                <button type="button" onclick="registrarPedido()">Registrar Pedido</button>
-                <input type="hidden" name="horario" value="x-sheetmonkey-current-date-time" />
-                <button type="button" >Lista de Pedidos</button>
-            </form>
-            
-            <button onclick="exportarExcel()">Exportar para Excel</button>
-                
-        </div>
-    </section>
-
-
-    <script src="index.js"></script>
-‎HtmlPrincipal/index.js
--7
-Original file line number	Diff line number	Diff line change
-@@ -14,11 +14,4 @@ let pedidos = [];
-            pedidos.push({ Nome: nome, Sobrenome: sobrenome, Turno: turno, Pedido: pedido });
-            alert('Pedido registrado com sucesso!');
-            document.getElementById('pedidoForm').reset();
-        }
-        function exportarExcel() {
-            let ws = XLSX.utils.json_to_sheet(pedidos);
-            let wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, "Pedidos");
-            XLSX.writeFile(wb, "pedidos.xlsx");
-        }
-‎HtmlPrincipal/style.css
-+71
--7
-Original file line number	Diff line number	Diff line change
-@@ -3,6 +3,9 @@ html{
+html{
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
     font-size: 16px;
-    padding: 16rem 7rem;
+    padding: 10rem 3rem;
     background: linear-gradient(250deg, #ffffff, #add8f5);
     font-family: "Inter", sans-serif;
 }
 
 *{
-@@ -14,20 +17,81 @@ body {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
     font-family: Arial, sans-serif; 
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
 }
+
 #title{
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
     font-weight: 700;
-
+    
 }
 
-div > form { 
-    max-width: 400px; 
 .container{
     background-color: rgb(245, 245, 245);
     padding: 1.5rem;
@@ -107,20 +37,21 @@ div > form {
     width: 75%;
     margin: 0 auto;
 }
+
 .container > form{
     display: flex; 
     flex-direction: column; 
     
 }
+
+
+
 label{
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: .5rem;
 }
 
-section{
-    padding: 16rem 10rem;
-    background-color: rgb(101, 209, 0);
 input{
     padding: .5rem;
     margin-bottom: 1rem;
@@ -128,6 +59,7 @@ input{
     border: .12rem solid #000;
     font-size: 1.5rem;
 }
+
 button{
     padding: .5rem;
     border-radius: 1rem;
@@ -139,6 +71,7 @@ button{
     width: 35%;
     margin: 0 auto;
     margin-top: 1.5rem;
+    transition: transform 0.2s ease-in-out;
     text-shadow:
     -1px -1px 0 black,  
      1px -1px 0 black,
@@ -147,10 +80,8 @@ button{
     
 }
 
-label, select, input, textarea, button { 
-    margin-bottom: 10px; 
 button:hover{
-    transform: translateY(-7px);
+    transform: translateY(-7px) scale(1.1);
     transition: 0.5s;
     color: rgb(255, 255, 255);
     box-shadow: 0px 15px 20px rgba(26, 93, 114, 0.781);
@@ -160,4 +91,42 @@ button:hover{
      1px -1px 0 rgb(70, 70, 70),
     -1px  1px 0 rgb(70, 70, 70),
      1px  1px 0 rgb(70, 70, 70);
+}
+
+
+@media only screen and (max-width: 1023px) {
+    html {
+        padding: 5rem 3rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    button {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        padding: 3rem .2rem ;
+        
+    }
+
+    .container {
+        width: 84%;
+    }
+
+    #title {
+        font-size: 2rem;
+    }
+
+    label, input, button {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 70%;
+    }
 }
