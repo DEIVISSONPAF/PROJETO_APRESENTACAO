@@ -14,15 +14,16 @@
         <div class="container">
 
               <h2 id="title">Registro de Pedidos</h2>
-               <form action="https://sheetdb.io/api/v1/bis9khu0s3y7c" method="POST" name="pedidos" id="pedidoForm">
+               <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
                 <label>Usuário:</label>
-                <input type="text" name="data[nome]" id="Nome" required>
+                <input type="text" name="data[Nome]" id="Nome" required>
             
                 <label>Codigo da Peça:</label>
-                <input type="text" name="data[peça]" id="Codigo" required>
+                <input type="text" name="data[Peça]" id="Codigo" required>
 
-                <button  type="submit" >Registrar Pedido</button>
                 <input type="hidden" name="Status" value="x-sheetmonkey-current-date-time" />
+                <button  type="submit" >Registrar Pedido</button>
+                
                 <button onclick="abrirNovaAba()">Lista de Pedidos</button>
 
             </form>
