@@ -8,31 +8,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>REGISTRADOR</title>
+    <style>
+        /* Estilos para o botão */
+        button {
+            background-color: white; /* Fundo branco */
+            border: none; /* Remove a borda do botão */
+            padding: 10px 20px; /* Ajusta o tamanho do botão */
+            cursor: pointer; /* Adiciona o cursor de pointer */
+        }
+
+        /* Estilos para o link dentro do botão */
+        button a {
+            text-decoration: none; /* Remove o sublinhado do link */
+            color: black; /* Define a cor do texto */
+        }
+    </style>
 </head>
 <body>
-    
-        <div class="container">
-
-            <h2 id="title">Registro de Pedidos</h2>
-            <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
-             <label>Usuário:</label>
-             <input type="text" name="data[Nome]" id="Nome" required>
+    <div class="container">
+        <h2 id="title">Registro de Pedidos</h2>
+        <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
+            <label>Usuário:</label>
+            <input type="text" name="data[Nome]" id="Nome" required>
          
-             <label>Codigo da Peça:</label>
-             <input type="text" name="data[Peça]" id="Codigo" required>
+            <label>Código da Peça:</label>
+            <input type="text" name="data[Peça]" id="Codigo" required>
 
-             <input type="hidden" name="data[Data]" value="x-sheetmonkey-current-date-time" />
-             <button  type="submit"> <a href="https://projetoapresentaca.netlify.app/">Registrar Pedido</a></button>
- 
-             <button onclick="abrirNovaAba()">Lista de Pedidos</button>
-
-         </form>
+            <input type="hidden" name="data[Data]" value="x-sheetmonkey-current-date-time" />
             
-                
-        </div>
+            <!-- Botão Registrar Pedido -->
+            <button type="submit">
+                <a href="https://projetoapresentaca.netlify.app/">Registrar Pedido</a>
+            </button>
 
+            <!-- Botão Lista de Pedidos -->
+            <button onclick="abrirNovaAba()">Lista de Pedidos</button>
 
-  
+        </form>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
