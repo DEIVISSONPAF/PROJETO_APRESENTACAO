@@ -1,4 +1,4 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-
+/* Corpo da página */
 body {
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
     text-align: center;
 }
 
-
+/* Container principal */
 .container {
     background: rgba(0, 0, 0, 0.2);
     padding: 30px;
@@ -26,7 +26,7 @@ body {
     width: 350px;
 }
 
-
+/* Botão estilizado */
 button {
     background: #ffcc00;
     color: #333;
@@ -43,7 +43,7 @@ button:hover {
     background: #ff9900;
 }
 
-
+/* Estilizando os registros de data/hora */
 .registro {
     margin-top: 20px;
     padding: 10px;
