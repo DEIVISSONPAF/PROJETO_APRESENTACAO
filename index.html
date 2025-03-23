@@ -9,37 +9,78 @@
     <link rel="stylesheet" href="style.css">
     <title>REGISTRADOR</title>
     <style>
-         .container img {
+        /* Definindo a imagem de fundo com pouca transparência */
+        body {
+            background-image: url('https://www.logweb.com.br/wp-content/uploads/2020/11/pub-fabrica-hyndai.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            opacity: 0.7; /* Opacidade para tornar a imagem mais suave */
+        }
+
+        /* Estilo para o container */
+        .container {
+            position: relative;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            padding-top: 40px;
+        }
+
+        /* Estilo para a imagem dentro do container */
+        .container img {
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 50px; /* Define o tamanho da imagem */
-            height: 50px; /* Define o tamanho da imagem */
-            object-fit: cover; /* Garante que a imagem se ajuste bem dentro da área */
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
         }
+
+        /* Estilo para o título */
+        h2#title {
+            font-size: 32px; /* Aumentando o tamanho do título */
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         /* Estilos para o botão */
         button {
-            background-color: #a4ddfb; /* Fundo branco */
-            border: none; /* Remove a borda do botão */
-            padding: 10px 20px; /* Ajusta o tamanho do botão */
-            cursor: pointer; /* Adiciona o cursor de pointer */
+            background-color: #a4ddfb;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         /* Estilos para o link dentro do botão */
         button a {
-            text-decoration: none; /* Remove o sublinhado do link */
-            color: white; /* Define a cor do texto */
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Estilos para o segundo botão */
+        button[type="button"] {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://th.bing.com/th/id/OIP.F2h9Sbl5RpL3q1UWdO21vQAAAA?rs=1&pid=ImgDetMain" alt="Imagem de exemplo"
+        <img src="https://th.bing.com/th/id/OIP.F2h9Sbl5RpL3q1UWdO21vQAAAA?rs=1&pid=ImgDetMain" alt="Imagem de exemplo">
+        
         <h2 id="title">Registro de Pedidos</h2>
         <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
             <label>Usuário:</label>
             <input type="text" name="data[Nome]" id="Nome" required>
-         
+        
             <label>Código da Peça:</label>
             <input type="text" name="data[Peça]" id="Codigo" required>
 
@@ -51,8 +92,7 @@
             </button>
 
             <!-- Botão Lista de Pedidos -->
-            <button onclick="abrirNovaAba()">Lista de Pedidos</button>
-
+            <button type="button" onclick="abrirNovaAba()">Lista de Pedidos</button>
         </form>
     </div>
 
