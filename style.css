@@ -93,7 +93,7 @@ button:hover{
      1px  1px 0 rgb(70, 70, 70);
 }
 
-/* Media Queries para responsividade */
+
 @media only screen and (max-width: 1023px) {
     html {
         padding: 5rem 3rem;

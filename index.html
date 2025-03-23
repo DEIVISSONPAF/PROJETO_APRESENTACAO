@@ -10,29 +10,27 @@
     <title>REGISTRADOR</title>
 </head>
 <body>
-    <!--PEDIDOS-->
+    
         <div class="container">
-            <h2 id="title">Registro de Pedidos</h2>
-            <form  method="post" id="pedidoForm">
-                <label>Nome:</label>
+
+              <h2 id="title">Registro de Pedidos</h2>
+               <form  method="post" id="pedidoForm">
+                <label>Usuário:</label>
                 <input type="text"  id="Nome" required>
-                
+            
                 <label>Codigo da Peça:</label>
                 <input type="text"  id="Codigo" required>
-
-                <label> Quantidade:</label>
-                <input type="number"  id="Quantidade" required>
-
-                
                 <button  type="submit" >Registrar Pedido</button>
                 <input type="hidden" name="Status" value="x-sheetmonkey-current-date-time" />
-                <button >Lista de Pedidos</button>
+                <button onclick="abrirNovaAba()">Lista de Pedidos</button>
+
             </form>
+            
                 
         </div>
 
 
-
+  
     <script src="index.js"></script>
 </body>
 </html>
