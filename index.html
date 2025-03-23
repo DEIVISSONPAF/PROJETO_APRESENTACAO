@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-<html lang=gi"pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRADOR DE PRIORIDADE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>REGISTRADOR DE PRIORIDADE</title>
 </head>
 <body>
     <div class="container">
-        <img src="img/Logo-CAOA-1.png" alt="" srcset="">        
+        <img src="img/Logo-CAOA-1.png" alt="Logo CAOA">        
         <h2 id="title">Registro de Pedidos</h2>
-       
-        <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
-          
-            <label>Usuário:</label>
-            <input type="text" name="data[Nome]" id="Nome" required>
-        
-            <label>Código da Peça:</label>
-            <input type="text" name="data[Peça]" id="Codigo" required>
 
-            <input type="hidden" name="data[Data]" value="x-sheetmonkey-current-date-time" />
-            
+        <form id="pedidoForm">
+            <label for="Nome">Usuário:</label>
+            <input type="text" id="Nome" name="Nome" placeholder="Digite seu nome" required>
+
+            <label for="Codigo">Código da Peça:</label>
+            <input type="text" id="Codigo" name="Peça" placeholder="Digite o código da peça" required>
+
             <div class="button-group">
-               
                 <button type="submit">Registrar Pedido</button>
                 <button type="button" onclick="abrirNovaAba()">Lista de Pedidos</button>
             </div>
-
-            
         </form>
     </div>
 
-    <script src="index.js"></script>
+    <script src="index.js"></script> 
 </body>
 </html>
