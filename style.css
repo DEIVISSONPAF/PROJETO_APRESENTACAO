@@ -56,14 +56,13 @@ input:focus {
     border-color: #007BFF;
 }
 
-/* Alinhamento dos botões */
 .button-group {
-    display: block; /* Garante que os botões fiquem empilhados */
+    display: block; 
     width: 100%;
 }
 
 button {
-    width: 100%; /* Garante que os botões ocupem toda a largura do formulário */
+    width: 100%; 
     padding: 12px;
     font-size: 16px;
     font-weight: 600;
@@ -71,7 +70,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px; /* Espaço entre os botões */
+    margin-top: 10px; 
 }
 
 button[type="submit"] {
