@@ -9,41 +9,66 @@
     <link rel="stylesheet" href="style.css">
     <title>REGISTRADOR</title>
     <style>
-        /* Estilos para o botão */
+        /* Estilo para o container */
+        .container {
+            position: relative; /* Necessário para posicionar a imagem dentro */
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        /* Estilo para a imagem no canto */
+        .container img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; /* Define o tamanho da imagem */
+            height: 50px; /* Define o tamanho da imagem */
+            object-fit: cover; /* Garante que a imagem se ajuste bem dentro da área */
+        }
+
+        /* Estilo para o botão */
         button {
-            background-color: #a4ddfb; /* Fundo branco */
+            background-color: white; /* Fundo branco */
             border: none; /* Remove a borda do botão */
             padding: 10px 20px; /* Ajusta o tamanho do botão */
             cursor: pointer; /* Adiciona o cursor de pointer */
+            font-family: 'Inter', sans-serif; /* Define a fonte */
+            font-size: 16px; /* Ajusta o tamanho da fonte */
         }
 
-        /* Estilos para o link dentro do botão */
+        /* Estilo para o link dentro do botão */
         button a {
             text-decoration: none; /* Remove o sublinhado do link */
-            color: white; /* Define a cor do texto */
+            color: black; /* Define a cor do texto */
+        }
+
+        /* Estilo para o segundo botão */
+        button[type="button"] {
+            background-color: #f0f0f0; /* Fundo cinza claro */
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    
     <div class="container">
+        <!-- Imagem no canto superior direito -->
+        <img src="https://th.bing.com/th/id/OIP.F2h9Sbl5RpL3q1UWdO21vQAAAA?rs=1&pid=ImgDetMain" alt="Imagem de exemplo">
+        
         <h2 id="title">Registro de Pedidos</h2>
         <form action="https://sheetdb.io/api/v1/qsdseylkcni5a" method="POST" name="ProjetoPedidos" id="pedidoForm">
             <label>Usuário:</label>
             <input type="text" name="data[Nome]" id="Nome" required>
-         
+        
             <label>Código da Peça:</label>
             <input type="text" name="data[Peça]" id="Codigo" required>
 
             <input type="hidden" name="data[Data]" value="x-sheetmonkey-current-date-time" />
-            
-            <!-- Botão Registrar Pedido -->
-            <button type="submit">
-                <a href="https://projetoapresentaca.netlify.app/">Registrar Pedido</a>
-            </button>
-
-            <!-- Botão Lista de Pedidos -->
-            <button onclick="abrirNovaAba()">Lista de Pedidos</button>
-
+            <button type="submit"><a href="https://projetoapresentaca.netlify.app/">Registrar Pedido</a></button>
+            <button type="button" onclick="abrirNovaAba()">Lista de Pedidos</button>
         </form>
     </div>
 
