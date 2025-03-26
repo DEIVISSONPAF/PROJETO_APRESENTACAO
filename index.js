@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nome = document.getElementById("Nome").value;
         const peca = document.getElementById("Codigo").value;
 
-        // Capturar a data e hora e formatá-las corretamente
+        
         const dataAtual = new Date();
         const dia = String(dataAtual.getDate()).padStart(2, '0'); 
         const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); 
@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutos = String(dataAtual.getMinutes()).padStart(2, '0');
         const segundos = String(dataAtual.getSeconds()).padStart(2, '0');
 
-        // Adicionando apóstrofe para forçar o Google Sheets a tratar como texto
-        const dataFormatada = `'${dia}/${mes}/${ano}'`; // Força a ser reconhecida como texto
-        const horaFormatada = `'${horas}:${minutos}:${segundos}'`; // Também evita conversões indesejadas
+
+        const dataFormatada = `'${dia}/${mes}/${ano}'`; 
+        const horaFormatada = `'${horas}:${minutos}:${segundos}'`; 
 
         const dados = {
             Nome: nome,   
